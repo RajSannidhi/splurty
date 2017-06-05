@@ -11,6 +11,7 @@
   <body>
   <header class="row">
     <div class="col-3">
+      <%= link_to root_path, class:'logo' do %>
       <div class="circle">
         <br />
         Carefully
@@ -19,11 +20,12 @@
         <br />
         Words
     </div>
+    <% end %>
     <div class="col-4 slogan">
       Splurting out quotes from notable poets since 2017
     </div>
     <div class="col-5 links">
-      <%= link_to 'Contribute', '#' %>
+      <%= link_to 'Contribute', new_quote_path %>
       <%= link_to 'About', '#' %>
     </div>
     </header>
@@ -40,7 +42,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
             Proudly hacked in San Diego, CA by Raj Sannidhi.
